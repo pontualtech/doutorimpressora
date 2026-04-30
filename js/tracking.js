@@ -70,6 +70,19 @@
     });
   });
 
+  // Drawer mobile (hamburger menu)
+  var burger = document.querySelector('.nav-burger');
+  var drawer = document.querySelector('.drawer');
+  var overlay = document.querySelector('.drawer-overlay');
+  var drawerClose = document.querySelector('.drawer-close');
+  function openDrawer(){ if(drawer){ drawer.classList.add('open'); overlay && overlay.classList.add('open'); document.body.classList.add('drawer-open'); burger && burger.setAttribute('aria-expanded','true'); }}
+  function closeDrawer(){ if(drawer){ drawer.classList.remove('open'); overlay && overlay.classList.remove('open'); document.body.classList.remove('drawer-open'); burger && burger.setAttribute('aria-expanded','false'); }}
+  if(burger){ burger.addEventListener('click', openDrawer); }
+  if(drawerClose){ drawerClose.addEventListener('click', closeDrawer); }
+  if(overlay){ overlay.addEventListener('click', closeDrawer); }
+  document.querySelectorAll('.drawer-nav a').forEach(function(a){ a.addEventListener('click', closeDrawer); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeDrawer(); });
+
   // LGPD Consent Mode
   var banner = document.getElementById('lgpd-banner');
   var consent = localStorage.getItem('lgpd_consent');
