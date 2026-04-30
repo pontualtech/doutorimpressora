@@ -34,11 +34,23 @@
   "name": "Doutor Impressora",
   "description": "Assistência técnica especializada em conserto e manutenção de impressoras na Grande São Paulo. 12+ anos de experiência.",
   "url": "https://doutorimpressora.com",
-  "telephone": "ATUALIZAR",
+  "telephone": "+551150439869",
+  "email": "contato@imprimitech.com.br",
   "priceRange": "$$",
-  "address": {"@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR"},
+  "address": {"@type": "PostalAddress", "streetAddress": "Rua Paranaubis, 312", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR"},
   "geo": {"@type": "GeoCoordinates", "latitude": -23.5505, "longitude": -46.6333},
-  "areaServed": {"@type": "City", "name": "São Paulo"}
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "08:30", "closes": "18:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:30", "closes": "17:00"}
+  ],
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "146"},
+  "sameAs": ["https://api.whatsapp.com/send?phone=5511966385774"],
+  "areaServed": {"@type": "City", "name": "São Paulo"},
+  "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Serviços", "itemListElement": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Conserto de Impressora"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Manutenção Preventiva"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Coleta e Entrega"}}
+  ]}
 }
 </script>
 
@@ -66,8 +78,8 @@ const GA_ID        = 'G-XXXXXXXXXX';     // GA4 Measurement ID
 const GADS_ID      = 'AW-XXXXXXXXX';     // Google Ads Conversion ID
 const GADS_LABEL   = '';                  // Label da conversão (ex: 'AbCdEf')
 const FB_PIXEL_ID  = '';                  // Meta Pixel ID
-const WA_PHONE     = '5511XXXXXXXXX';    // WhatsApp completo com 55+DDD+número
-const WA_MSG       = 'Olá! Vim pelo site e quero um orçamento';
+const WA_PHONE     = '5511966385774';    // WhatsApp Doutor Impressora (operado pela Imprimitech)
+const WA_MSG       = 'Olá Doutor Impressora! Vim pelo site e quero fazer um orçamento para minha impressora.';
 </script>
 
 <!-- Google Consent Mode v2 (LGPD) + GTM -->
@@ -577,7 +589,7 @@ footer{background:var(--ink);color:#cbd5e1;padding:3rem 0 1.5rem}
 
 <!-- Sticky Mobile Bottom -->
 <div class="mobile-bar">
-  <a href="tel:+55ATUALIZAR" class="btn btn-ghost" data-event="phone_click">📞 Ligar</a>
+  <a href="tel:+551150439869" class="btn btn-ghost" data-event="phone_click">📞 Ligar</a>
   <a href="#" class="btn btn-whats wa-link" data-event="whatsapp_click_mobile_bar" style="flex:1.4">WhatsApp grátis</a>
 </div>
 
