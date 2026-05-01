@@ -75,16 +75,13 @@
      TRACKING IDS — Karlão preenche aqui depois de criar contas
      ============================================================ -->
 <script>
-const GTM_ID       = 'GTM-K2X72SKT';      // Google Tag Manager (criar em tagmanager.google.com)
-const GA_ID        = 'G-D330DN28DZ';     // GA4 Measurement ID
-const GADS_ID      = 'AW-11013273461';     // Google Ads Conversion ID
-const GADS_LABEL='80v0COyXwZscEPXuxIMp';                  // Label da conversão (ex: 'AbCdEf')
-const FB_PIXEL_ID  = '';                  // Meta Pixel ID
+const GTM_ID       = 'GTM-K2X72SKT';      // Google Tag Manager (todas as outras tags ficam dentro do container)
 const WA_PHONE     = '5511966385774';    // WhatsApp Doutor Impressora (operado pela Imprimitech)
 const WA_MSG       = 'Olá Doutor Impressora! Vim pelo site e quero fazer um orçamento para minha impressora.';
+window.fbq = window.fbq || function(){(window.fbq.q=window.fbq.q||[]).push(arguments)};
 </script>
 
-<!-- Google Consent Mode v2 (LGPD) + GTM -->
+<!-- Google Consent Mode v2 (LGPD) + GTM (única fonte de tags: GA4, Google Ads, Meta Pixel etc) -->
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('consent','default',{
@@ -93,16 +90,6 @@ gtag('consent','default',{
   security_storage:'granted', url_passthrough:true, ads_data_redaction:true, wait_for_update:500
 });
 (function(w,d,s,l,i){if(!i||i.indexOf('XXX')>-1)return;w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',GTM_ID);
-</script>
-
-<!-- GA4 -->
-<script>
-if(GA_ID && GA_ID.indexOf('XXX')<0){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(s);gtag('js',new Date());gtag('config',GA_ID,{anonymize_ip:true});if(GADS_ID && GADS_ID.indexOf('XXX')<0){gtag('config',GADS_ID);}}
-</script>
-
-<!-- Meta Pixel -->
-<script>
-if(FB_PIXEL_ID){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',FB_PIXEL_ID);fbq('track','PageView');}
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -653,10 +640,8 @@ document.querySelectorAll('.wa-link').forEach(el => {
   el.setAttribute('rel', 'noopener noreferrer');
   el.addEventListener('click', () => {
     const event = el.getAttribute('data-event') || 'whatsapp_click';
-    if(window.gtag){gtag('event', event, {event_category: 'engagement', event_label: 'whatsapp', value: 1});}
-    if(window.fbq){fbq('track', 'Contact');}
-    if(GADS_ID && GADS_LABEL){gtag('event','conversion',{send_to: `${GADS_ID}/${GADS_LABEL}`});}
-    dataLayer.push({event: event});
+    // Conversão Google Ads + GA4 + Meta Pixel: tudo configurado via GTM (trigger Custom Event)
+    dataLayer.push({event: event, event_category: 'engagement', event_label: 'whatsapp', value: 1});
   });
 });
 
