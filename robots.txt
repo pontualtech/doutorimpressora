@@ -45,6 +45,9 @@ User-agent: LinkedInBot
 Allow: /
 
 # ========== AI / LLM CRAWLERS ==========
+User-agent: CCBot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
