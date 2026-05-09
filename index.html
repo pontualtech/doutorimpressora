@@ -56,6 +56,38 @@
 }
 </script>
 
+<!-- Schema: WebSite com SearchAction -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Doutor Impressora",
+  "url": "https://doutorimpressora.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://doutorimpressora.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {"@type": "Organization", "name": "Doutor Impressora"}
+}
+</script>
+
+<!-- Schema: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Doutor Impressora",
+  "url": "https://doutorimpressora.com",
+  "logo": "https://doutorimpressora.com/img/logo.png",
+  "contactPoint": [
+    {"@type": "ContactPoint", "telephone": "+55-11-5043-9869", "contactType": "customer service", "areaServed": "BR", "availableLanguage": "Portuguese"},
+    {"@type": "ContactPoint", "telephone": "+55-11-96638-5774", "contactType": "customer support", "contactOption": "WhatsApp", "availableLanguage": "Portuguese"}
+  ],
+  "sameAs": ["https://wa.me/5511966385774"]
+}
+</script>
+
 <!-- Schema: FAQPage -->
 <script type="application/ld+json">
 {
@@ -66,7 +98,9 @@
     {"@type": "Question", "name": "Em quanto tempo recebo o orçamento?", "acceptedAnswer": {"@type": "Answer", "text": "Em até 4 horas pelo WhatsApp."}},
     {"@type": "Question", "name": "Quais marcas vocês atendem?", "acceptedAnswer": {"@type": "Answer", "text": "HP, Canon, Epson, Brother, Samsung, Lexmark, Xerox e outras marcas."}},
     {"@type": "Question", "name": "Vocês têm leva-e-traz grátis?", "acceptedAnswer": {"@type": "Answer", "text": "Sim, atendimento em domicílio com retirada e entrega gratuita em São Paulo capital."}},
-    {"@type": "Question", "name": "Qual a garantia?", "acceptedAnswer": {"@type": "Answer", "text": "Garantia em todos os serviços, informada no orçamento."}}
+    {"@type": "Question", "name": "Qual a garantia?", "acceptedAnswer": {"@type": "Answer", "text": "Garantia de 90 dias em todos os serviços e peças. Para empresas com contrato anual, garantia estendida para 12 meses."}},
+    {"@type": "Question", "name": "Recarregam cartucho ou toner?", "acceptedAnswer": {"@type": "Answer", "text": "Sim, recarga de cartucho jato e toner laser com qualidade certificada. Custo até 50% mais barato que original."}},
+    {"@type": "Question", "name": "Atendem empresa com contrato mensal?", "acceptedAnswer": {"@type": "Answer", "text": "Sim, fazemos contratos personalizados de manutenção preventiva mensal para empresas com 5 ou mais impressoras."}}
   ]
 }
 </script>
