@@ -6,7 +6,7 @@
   --paper:#FFFFFF; --paper-2:#F8FAFC; --paper-3:#F1F5F9;
   --primary:#0B5FBA; --primary-d:#084994;
   --primary-l:#E8F2FF; --primary-l2:#F0F7FF;
-  --whats:#25D366; --whats-d:#1FAE54;
+  --whats:#15803D; --whats-d:#0F6A30;
   --amber:#F59E0B; --amber-l:#FEF3C7;
   --green:#10B981;
   --shadow:0 1px 3px rgba(15,23,42,.06),0 4px 12px rgba(15,23,42,.04);
@@ -32,11 +32,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .nav-links a{color:var(--slate);font-weight:500;font-size:.95rem;transition:color .15s}
 .nav-links a:hover,.nav-links a.active{color:var(--primary)}
 .nav-cta{display:none;align-items:center;gap:.5rem;padding:.625rem 1.125rem;background:var(--whats);color:#fff;border-radius:999px;font-weight:600;font-size:.9rem;transition:transform .15s,box-shadow .15s}
-.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(37,211,102,.35)}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(21,128,61,.35)}
 @media (min-width:900px){.nav-links,.nav-cta{display:flex}}
 
 /* Mobile: WhatsApp compacto + hamburger */
-.nav-wa-mobile{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;background:var(--whats);color:#fff;border-radius:50%;flex-shrink:0;box-shadow:0 4px 12px rgba(37,211,102,.3);transition:transform .15s}
+.nav-wa-mobile{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;background:var(--whats);color:#fff;border-radius:50%;flex-shrink:0;box-shadow:0 4px 12px rgba(21,128,61,.3);transition:transform .15s}
 .nav-wa-mobile:hover{transform:scale(1.05)}
 .nav-burger{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:transparent;color:var(--ink);transition:background .15s;flex-shrink:0;border:1px solid var(--line)}
 .nav-burger:hover,.nav-burger:focus-visible{background:var(--paper-2)}
@@ -58,7 +58,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .drawer-nav a:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
 .drawer-cta{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:.5rem}
 .drawer-cta a{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.95rem 1rem;border-radius:999px;font-weight:700;font-size:1rem;min-height:48px}
-.drawer-cta .wa{background:var(--whats);color:#fff;box-shadow:0 6px 14px rgba(37,211,102,.3)}
+.drawer-cta .wa{background:var(--whats);color:#fff;box-shadow:0 6px 14px rgba(21,128,61,.3)}
 .drawer-cta .tel{background:var(--paper-2);color:var(--ink);border:1px solid var(--line)}
 body.drawer-open{overflow:hidden}
 
@@ -77,8 +77,8 @@ section{padding:5rem 0;position:relative}
 
 /* Btn */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:1rem 1.75rem;border-radius:999px;font-weight:700;font-size:1rem;transition:transform .15s,box-shadow .2s,background .15s;white-space:nowrap}
-.btn-whats{background:var(--whats);color:#fff;box-shadow:0 6px 16px rgba(37,211,102,.3)}
-.btn-whats:hover{background:var(--whats-d);transform:translateY(-1px);box-shadow:0 10px 24px rgba(37,211,102,.4)}
+.btn-whats{background:var(--whats);color:#fff;box-shadow:0 6px 16px rgba(21,128,61,.3)}
+.btn-whats:hover{background:var(--whats-d);transform:translateY(-1px);box-shadow:0 10px 24px rgba(21,128,61,.4)}
 .btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
 .btn-ghost:hover{border-color:var(--primary);color:var(--primary)}
 .btn-primary{background:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(11,95,186,.3)}
@@ -112,7 +112,7 @@ footer{background:var(--ink);color:#cbd5e1;padding:3rem 0 1.5rem}
 .foot-bottom{padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.08);text-align:center;color:#94a3b8;font-size:.85rem}
 
 /* WhatsApp Float */
-.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:40;width:60px;height:60px;background:var(--whats);border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 8px 24px rgba(37,211,102,.45);transition:transform .2s}
+.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:40;width:60px;height:60px;background:var(--whats);border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 8px 24px rgba(21,128,61,.45);transition:transform .2s}
 .wa-float:hover{transform:scale(1.08)}
 .wa-float::after{content:'';position:absolute;inset:0;border-radius:50%;background:var(--whats);opacity:.5;animation:wa-ring 2s ease-out infinite}
 @keyframes wa-ring{0%{transform:scale(1);opacity:.5}100%{transform:scale(1.6);opacity:0}}
