@@ -106,10 +106,10 @@ footer{background:var(--ink);color:#cbd5e1;padding:3rem 0 1.5rem}
 @media (min-width:700px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}}
 .foot-brand .logo{color:#fff;margin-bottom:1rem}
 .foot-brand p{color:#94a3b8;font-size:.9rem;line-height:1.6;max-width:300px}
-.foot-col h4{color:#fff;font-family:'Bricolage Grotesque',sans-serif;font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem}
+.foot-col h3{color:#fff;font-family:'Bricolage Grotesque',sans-serif;font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;font-weight:700}
 .foot-col a{display:flex;align-items:center;min-height:44px;color:#94a3b8;font-size:.9rem;transition:color .15s}
 .foot-col a:hover{color:#fff}
-.foot-bottom{padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.08);text-align:center;color:#64748b;font-size:.85rem}
+.foot-bottom{padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.08);text-align:center;color:#94a3b8;font-size:.85rem}
 
 /* WhatsApp Float */
 .wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:40;width:60px;height:60px;background:var(--whats);border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 8px 24px rgba(37,211,102,.45);transition:transform .2s}
