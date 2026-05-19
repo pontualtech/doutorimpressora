@@ -107,7 +107,7 @@ footer{background:var(--ink);color:#cbd5e1;padding:3rem 0 1.5rem}
 .foot-brand .logo{color:#fff;margin-bottom:1rem}
 .foot-brand p{color:#94a3b8;font-size:.9rem;line-height:1.6;max-width:300px}
 .foot-col h4{color:#fff;font-family:'Bricolage Grotesque',sans-serif;font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem}
-.foot-col a{display:block;padding:.35rem 0;color:#94a3b8;font-size:.9rem;transition:color .15s}
+.foot-col a{display:flex;align-items:center;min-height:44px;color:#94a3b8;font-size:.9rem;transition:color .15s}
 .foot-col a:hover{color:#fff}
 .foot-bottom{padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.08);text-align:center;color:#64748b;font-size:.85rem}
 
@@ -129,7 +129,7 @@ footer{background:var(--ink);color:#cbd5e1;padding:3rem 0 1.5rem}
 .lgpd p{flex:1;min-width:200px;font-size:.825rem;color:#cbd5e1;line-height:1.45;margin:0}
 .lgpd p a{color:#93c5fd;text-decoration:underline}
 .lgpd-btns{display:flex;gap:.4rem;flex-shrink:0}
-.lgpd-btn{padding:.55rem .95rem;border-radius:999px;font-weight:600;font-size:.8rem;cursor:pointer;transition:opacity .15s,background .15s;min-height:36px;white-space:nowrap}
+.lgpd-btn{padding:.55rem .95rem;border-radius:999px;font-weight:600;font-size:.8rem;cursor:pointer;transition:opacity .15s,background .15s;min-height:44px;white-space:nowrap}
 .lgpd-btn.accept{background:var(--whats);color:#fff}
 .lgpd-btn.essential{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3)}
 .lgpd-btn:hover{opacity:.9}
