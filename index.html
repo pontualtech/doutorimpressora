@@ -669,6 +669,10 @@ footer{background:var(--ink);color:#cbd5e1;padding:3rem 0 1.5rem}
 </div>
 
 <script>
+// Auditoria 07/07: o script estava ANTES do HTML do drawer (mais abaixo), então
+// .drawer/.drawer-overlay eram null → menu mobile morto + wa-link do drawer preso
+// em href="#". Envolver em DOMContentLoaded garante o DOM inteiro pronto.
+document.addEventListener('DOMContentLoaded', function () {
 // Drawer mobile
 const burger = document.querySelector('.nav-burger');
 const drawerEl = document.querySelector('.drawer');
@@ -742,6 +746,7 @@ function setConsent(level){
 document.getElementById('lgpd-accept').addEventListener('click', () => setConsent('all'));
 document.getElementById('lgpd-essential').addEventListener('click', () => setConsent('essential'));
 if(consent === 'all') setConsent('all');
+});
 </script>
 
 <div class="drawer-overlay" aria-hidden="true"></div>
